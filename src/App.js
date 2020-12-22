@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Countdown from './Components/Timer.jsx'
+import Stopwatch from "./components/Stopwatch/Stopwatch";
 
 function App() {
   return (
@@ -18,9 +18,8 @@ function App() {
         >
           Learn React
         </a>
-      <Countdown  key={10} tiempo={10}/>
-      <Countdown  key={5} timpo={5}/>
-      <Countdown  key={20} timpo={5}/>
+        <Stopwatch key={5} h={0} m={0} s={5}/>
+        <Stopwatch key={4} h={0} m={1} s={0}/>
       </header>
     </div>
   );
