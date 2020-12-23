@@ -5,8 +5,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './index.css';
 import {DATA} from './data';
+import React, { useEffect } from 'react';
 
 function App() {
+  useEffect(() => { document.title = "Prueba Arkon"}, []);
   return (
     <div>
     <Header />
