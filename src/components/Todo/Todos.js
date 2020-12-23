@@ -88,7 +88,9 @@ const headingText = `${taskList.length} ${tasksNoun}`;
           {filterList}
         </ButtonGroup>
       </div>
-      <h5>{headingText}</h5>
+      <div className="col text-center">
+        <h5>{headingText}</h5>
+      </div>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
