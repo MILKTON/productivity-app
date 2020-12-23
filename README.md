@@ -17,57 +17,50 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+# Requerimientos del Usuario 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El usuario puede realizar las siguientes acciones:
+- [x] Crear una tarea
+- [ ] Modificar duración de la tarea
+- [x] Modificar descripción de la tarea
+- [x] Eliminar una tarea
+- [ ] Reordenar la lista de tareas
+- [x] Comenzar con la tarea en curso
+- [x] Pausar, detener o reiniciar el temporizador
+- [x] Marcar la tarea en curso como finalizada
+- [x] Ver el historial de tareas completadas
+- [ ] Ver una gráfica de su historial de tareas en la última semana
+- [x] Filtrar la lista de tareas pendientes según su duración:
+  - corto 30 min o menos
+  - medio: de 30 min a 1h
+  - largo: más de 1h
 
-### `npm run build`
+# Reglas de negocio
+- [ ] La tarea en curso es la tarea que está al inicio de la lista.
+- [ ] Al marcar la tarea en curso como completada, debe registrarse el tiempo que tomó al usuario completar dicha tarea.
+- [ ] Al cerrar la aplicación, el temporizador siempre se pausa.
+- [x] Se manejan tres duraciones predeterminadas para una tarea ( corta: 30 min, media: 45 min, larga: 1h )
+- [x] El usuario también puede definir su propia duración en minutos y segundos para una tarea, la cual no puede superar las dos horas.
+- [ ] Al expirar el tiempo de la tarea en curso, ésta se marca como completada
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Interfaz de usuario
+- [x] Los componentes de la interfaz deben ser desarrollados en React.
+- [x] framework de UI: react-bootstrap 
+- [ ] framework de gráfica: react-d3
+- [x] Se recomienda los componentes se estructuren entre contenedores y presentacionales (stateful vs stateless)
+- [x] Cuidar la responsividad de la interfaz en múltiples dispositivos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Aplicación
+- [x] Los componentes deberían utilizar react hooks.
+- [x] Debe existir una función para prellenar la aplicación con 50 tareas aleatorias, completadas consumiendo entre el 80% y el 100% de su duración, distribuidas en la última semana
 
-### `npm run eject`
+# Código
+- [x] Desarrollar el código utilizando la especificación más reciente de JavaScript (ES6)
+- [ ] Incluir suficientes comentarios en el código
+- [x] Manejar control de versiones
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Opcionales
+- [ ] Persistir el estado de la aplicación a través de un API
+- [x] Desplegar la aplicación en un servicio PaaS como Heroku
+- [ ] Incluir pruebas unitarias para la manipulación del estado de la aplicación
