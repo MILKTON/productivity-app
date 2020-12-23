@@ -2,10 +2,10 @@ import React from "react";
 
 function Button({ startTimer, status, stopTimer, resetTimer, resumeTimer }) {
   return (
-    <div>
+    <>
       {status === 0 ? (
         <button
-          className="stopwatch-btn stopwatch-btn-gre"
+          className="btn btn-info btn-sm"
           onClick={startTimer}
         >
           Start
@@ -15,55 +15,55 @@ function Button({ startTimer, status, stopTimer, resetTimer, resumeTimer }) {
       )}
 
       {status === 1 ? (
-        <div>
+        <>
           <button
-            className="stopwatch-btn stopwatch-btn-red"
+            className="btn btn-info btn-sm"
             onClick={stopTimer}
           >
             Stop
           </button>
 
           <button
-            className="stopwatch-btn stopwatch-btn-yel"
+            className="btn btn-info btn-sm"
             onClick={resetTimer}
           >
             Reset
           </button>
-        </div>
+        </>
       ) : (
         ""
       )}
 
       {status === 2 ? (
-        <div>
+        <>
           <button
-            className="stopwatch-btn stopwatch-btn-gre"
+            className="btn btn-info btn-sm btn btn-info btn-sm-gre"
             onClick={resumeTimer}
           >
             Resume
           </button>
 
           <button
-            className="stopwatch-btn stopwatch-btn-yel"
+            className="btn btn-info btn-sm btn btn-info btn-sm-yel"
             onClick={resetTimer}
           >
             Reset
           </button>
-        </div>
+        </>
       ) : (
         ""
       )}
 
        {status === 3 ? (
-        <div>
+        <>
 
             Timer finalizado
 
-        </div>
+        </>
       ) : (
         ""
       )}
-    </div>
+    </>
   );
 }
 

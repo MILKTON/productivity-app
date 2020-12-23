@@ -61,20 +61,16 @@ const App = (props) => {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          <Display time={time} />
-          <Button
-            startTimer={startTimer}
-            stopTimer={stopTimer}
-            resetTimer={resetTimer}
-            resumeTimer={resumeTimer}
-            status={status}
-          />
-        </div>
-      </div>
-    </div>
+    <span>
+      <Display time={time} />
+      <Button
+        startTimer={startTimer}
+        stopTimer={stopTimer}
+        resetTimer={resetTimer}
+        resumeTimer={resumeTimer}
+        status={status}
+      />
+    </span>
   );
 };
 

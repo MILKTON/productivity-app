@@ -7,14 +7,14 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 function Todos(props) {
 const [tasks, setTasks] = useState(props.tasks);
-const [filter, setFilter] = useState('All');
+const [filter, setFilter] = useState('Todas');
 const FILTER_MAP = {
-  All: () => true,
-  Active: task => !task.completed,
-  Completed: task => task.completed,
-  Corto: task => task.seconds <=30,
-  Medio: task => task.seconds > 30 && task.seconds <= 60,
-  Largo: task => task.seconds > 60,
+  Todas: () => true,
+  Activas: task => !task.completed,
+  Finalizadas: task => task.completed,
+  Corto: task => (task.seconds <=30 && !task.completed),
+  Medio: task => (task.seconds > 30 && task.seconds <= 60 && !task.completed),
+  Largo: task => (task.seconds > 60 && !task.completed),
 };
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
@@ -82,12 +82,13 @@ const headingText = `${taskList.length} ${tasksNoun}`;
   return (
     <div className="todoapp stack-large">
       <Form addTask={addTask} />
-      <div className="filters btn-group stack-exception">
+      <label htmlFor="button-group">Filtrar tareas por estado o duración</label>
+      <div className="filters btn-group stack-exception" id="button-group">
         <ButtonGroup size="sm">
           {filterList}
         </ButtonGroup>
       </div>
-      <h2 id="list-heading">{headingText}</h2>
+      <h5>{headingText}</h5>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"

@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Todos from "./components/Todo/Todos";
+import Header from './components/Header';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './index.css';
@@ -13,13 +14,16 @@ const DATA = [
 ];
 function App() {
   return (
+    <div>
+    <Header />
     <Container>
       <Row className="bg-light">
-        <Col sm={12} md={{ span: 6, offset: 3 }}>
+        <Col sm={12} md={{ span: 8, offset: 2 }}>
           <Todos tasks={DATA} />
         </Col>
       </Row>
     </Container>
+    </div>
   );
 }
 

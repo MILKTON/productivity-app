@@ -96,23 +96,22 @@ input[type="text"] {
 .stack-small > * + * {
   margin-top: 1.25rem;
 }
-.stack-large > * + * {
-  margin-top: 2.5rem;
-}
+
 @media screen and (min-width: 550px) {
   .stack-small > * + * {
-    margin-top: 1.4rem;
+    margin-top: 0.5rem;
   }
   .stack-large > * + * {
-    margin-top: 2.8rem;
+    margin-top: 0.5rem;
   }
 }
 .stack-exception {
-  margin-top: 1.2rem;
+  margin-top: 0.5rem;
 }
 /* END GLOBAL STYLES */
 .todoapp {
   margin-bottom: 4rem;
+  margin-top: 2rem;
   padding: 2rem;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
@@ -194,7 +193,6 @@ input[type="text"] {
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 1.6rem;
   line-height: 1.25;
   display: block;
   position: relative;
@@ -265,4 +263,59 @@ label {
 
 .form-group > input[type="text"] {
   margin-top: 2px !important;
+}
+
+.nav-link {
+  padding: 0.1rem 1rem !important;
+}
+
+@media screen and (max-width: 550px) {
+  .btn-group {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: center;
+    justify-content: center;
+      position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-bottom: 0.5em;
+  }
+
+  .btn-group>.btn, .btn-group>.btn-group {
+    width: 100%;
+  }
+}
+
+.formControlSelect {
+  padding: 0.1rem 1rem !important;
+  height: auto !important;
+}
+
+header {
+  margin: 0;
+  padding: 20px;
+  letter-spacing: 4px;
+  box-shadow: 5px 5px 60px #d9d9d9, -5px -5px 60px #ffffff; 
+}
+
+@media screen and (min-width: 768px) {
+    header {
+      padding: 40px 20px; 
+  } 
+}
+
+header h1 {
+  text-align: center;
+  font-size: 40px; 
+}
+
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  background-color: #17a2b8 !important;
+}
+.nav-item>a{
+  color: black;
 }
