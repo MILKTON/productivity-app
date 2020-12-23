@@ -44,7 +44,7 @@ const editingTemplate = (
 const viewTemplate = (
   <div className="stack-small">
   <div>
-    <h2 className={"d-inline task-item " + isComplete}>Tarea {props.name}</h2>
+    <h2 className={"d-inline task-item " + isComplete}>{props.name}</h2>
     <input
       className="float-right"
       type="checkbox" id={props.id}
@@ -54,16 +54,17 @@ const viewTemplate = (
     <p className="mb-0">Duracion total {props.seconds}</p>
     <p className="d-inline">Tiempo restante</p> <Stopwatch h={0} m={props.seconds} s={0}/>
   </div>
+  <div>{'\u00A0'}</div>
   <div className="btn-group float-right">
     <Button type="button" className="btn btn-warning btn-sm" onClick={() => setEditing(true)}>
-      Edit
+      Editar ✎
     </Button>
     <Button
       type="button"
       className="btn btn-danger btn-sm"
       onClick={() => props.deleteTask(props.id)}
     >
-      Delete
+      Eliminar 🗑
     </Button>
   </div>
   </div>

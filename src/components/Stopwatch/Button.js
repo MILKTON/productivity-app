@@ -5,10 +5,10 @@ function Button({ startTimer, status, stopTimer, resetTimer, resumeTimer }) {
     <>
       {status === 0 ? (
         <button
-          className="btn btn-info btn-sm"
+          className="btn btn-sm"
           onClick={startTimer}
         >
-          Start
+          ▶
         </button>
       ) : (
         ""
@@ -17,17 +17,17 @@ function Button({ startTimer, status, stopTimer, resetTimer, resumeTimer }) {
       {status === 1 ? (
         <>
           <button
-            className="btn btn-info btn-sm"
+            className="btn btn-sm"
             onClick={stopTimer}
           >
-            Stop
+            ⏹
           </button>
 
           <button
-            className="btn btn-info btn-sm"
+            className="btn btn-sm"
             onClick={resetTimer}
           >
-            Reset
+            ↺
           </button>
         </>
       ) : (
@@ -37,17 +37,17 @@ function Button({ startTimer, status, stopTimer, resetTimer, resumeTimer }) {
       {status === 2 ? (
         <>
           <button
-            className="btn btn-info btn-sm btn btn-info btn-sm-gre"
+            className="btn btn-sm"
             onClick={resumeTimer}
           >
-            Resume
+            ▶
           </button>
 
           <button
-            className="btn btn-info btn-sm btn btn-info btn-sm-yel"
+            className="btn btn-sm"
             onClick={resetTimer}
           >
-            Reset
+            ↺
           </button>
         </>
       ) : (

@@ -63,6 +63,7 @@ const App = (props) => {
   return (
     <span>
       <Display time={time} />
+      {'\u00A0'}
       <Button
         startTimer={startTimer}
         stopTimer={stopTimer}
