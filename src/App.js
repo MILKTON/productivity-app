@@ -1,27 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-import Stopwatch from "./components/Stopwatch/Stopwatch";
+import Container from 'react-bootstrap/Container';
+import Todos from "./components/Todo/Todos";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './index.css';
 
+const DATA = [
+  { id: "todo-0", name: "Eatss", seconds:"15", completed: true },
+  { id: "todo-1", name: "Sleepss", seconds:"20", completed: false },
+  { id: "todo-12", name: "reportWebVitals.js", seconds:"30", completed: false },
+  { id: "todo-22", name: "Repeasss", seconds:"60", completed: false },
+  { id: "todo-20", name: "XD", seconds:"61", completed: false }
+];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Stopwatch key={5} h={0} m={0} s={5}/>
-        <Stopwatch key={4} h={0} m={1} s={0}/>
-      </header>
-    </div>
+    <Container>
+      <Row className="bg-light">
+        <Col sm={12} md={{ span: 6, offset: 3 }}>
+          <Todos tasks={DATA} />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
