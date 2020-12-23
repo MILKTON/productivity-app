@@ -33,6 +33,36 @@ input {
   display: inline-block;
   margin-top: 0.4rem;
 }
+.btn.toggle-btn {
+  border-width: 1px;
+  border-color: #d3d3d3;
+}
+.btn.toggle-btn[aria-pressed="true"] {
+  text-decoration: underline;
+  background-color: #065763;
+}
+.btn__danger {
+  color: #fff;
+  background-color: #ca3c3c;
+  border-color: #bd2130;
+}
+.btn__filter {
+  border-color: lightgrey;
+}
+.btn__primary {
+  color: #fff;
+  background-color: #000;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-group > * {
+  flex: 1 1 49%;
+}
+.btn-group > * + * {
+  margin-left: 0.8rem;
+}
 .label-wrapper {
   margin: 0;
   flex: 0 0 100%;
