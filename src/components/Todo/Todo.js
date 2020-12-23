@@ -4,6 +4,7 @@ import Stopwatch from "../Stopwatch/Stopwatch";
 export default function Todo(props) {
 const [isEditing, setEditing] = useState(false);
 const [newName, setNewName] = useState("");
+const isComplete = props.completed ? "task-complete"  : "";
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -28,12 +29,12 @@ const editingTemplate = (
     <div className="btn-group">
       <button
         type="button"
-        className="btn todo-cancel"
+        className="btn btn-dark btn-sm"
         onClick={() => setEditing(false)}
       >
         Cancel
       </button>
-      <button type="submit" className="btn btn__primary todo-edit">
+      <button type="submit" className="btn btn-success btn-sm">
         Save
       </button>
     </div>
@@ -41,33 +42,29 @@ const editingTemplate = (
 );
 const viewTemplate = (
   <div className="stack-small">
-    <div className="c-cb">
-
-    <h6>Tarea {props.name}</h6>
-    <h6>Duracion total {props.seconds}</h6>
-    <span className="h6">Tiempo restante</span> <Stopwatch h={0} m={props.seconds} s={0}/>
-
-        <input
-          type="checkbox" id={props.id}
-          defaultChecked={props.completed}
-          onChange={() => props.toggleTaskCompleted(props.id)}
-        />
-
-        <label >
-        </label>
-      </div>
-      <div className="btn-group">
-        <button type="button" className="btn" onClick={() => setEditing(true)}>
-          Edit <span className="visually-hidden">{props.name}</span>
-        </button>
-        <button
-          type="button"
-          className="btn btn__danger"
-          onClick={() => props.deleteTask(props.id)}
-        >
-          Delete <span className="visually-hidden">{props.name}</span>
-        </button>
-      </div>
+  <div>
+    <h2 className={"d-inline task-item " + isComplete}>Tarea {props.name}</h2>
+    <input
+      className="float-right"
+      type="checkbox" id={props.id}
+      defaultChecked={props.completed}
+      onChange={() => props.toggleTaskCompleted(props.id)}
+    />
+    <p className="mb-0">Duracion total {props.seconds}</p>
+    <p className="d-inline">Tiempo restante</p> <Stopwatch h={0} m={props.seconds} s={0}/>
+  </div>
+  <div className="btn-group float-right">
+    <button type="button" className="btn btn-warning btn-sm" onClick={() => setEditing(true)}>
+      Edit
+    </button>
+    <button
+      type="button"
+      className="btn btn-danger btn-sm"
+      onClick={() => props.deleteTask(props.id)}
+    >
+      Delete
+    </button>
+  </div>
   </div>
 );
 
