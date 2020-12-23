@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Stopwatch from "../Stopwatch/Stopwatch";
+import Button from 'react-bootstrap/Button';
 
 export default function Todo(props) {
 const [isEditing, setEditing] = useState(false);
@@ -27,16 +28,16 @@ const editingTemplate = (
     />
     </div>
     <div className="btn-group">
-      <button
+      <Button
         type="button"
         className="btn btn-dark btn-sm"
         onClick={() => setEditing(false)}
       >
         Cancel
-      </button>
-      <button type="submit" className="btn btn-success btn-sm">
+      </Button>
+      <Button type="submit" className="btn btn-success btn-sm">
         Save
-      </button>
+      </Button>
     </div>
   </form>
 );
@@ -54,16 +55,16 @@ const viewTemplate = (
     <p className="d-inline">Tiempo restante</p> <Stopwatch h={0} m={props.seconds} s={0}/>
   </div>
   <div className="btn-group float-right">
-    <button type="button" className="btn btn-warning btn-sm" onClick={() => setEditing(true)}>
+    <Button type="button" className="btn btn-warning btn-sm" onClick={() => setEditing(true)}>
       Edit
-    </button>
-    <button
+    </Button>
+    <Button
       type="button"
       className="btn btn-danger btn-sm"
       onClick={() => props.deleteTask(props.id)}
     >
       Delete
-    </button>
+    </Button>
   </div>
   </div>
 );
