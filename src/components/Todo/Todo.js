@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Stopwatch from "../Stopwatch/Stopwatch";
 
 export default function Todo(props) {
 const [isEditing, setEditing] = useState(false);
@@ -54,6 +55,7 @@ const viewTemplate = (
           {props.seconds}
         </label>
       </div>
+      <Stopwatch h={0} m={props.seconds} s={0}/>
       <div className="btn-group">
         <button type="button" className="btn" onClick={() => setEditing(true)}>
           Edit <span className="visually-hidden">{props.name}</span>

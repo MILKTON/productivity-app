@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 function Form(props) {
   const [name, setName] = useState("");
@@ -12,33 +13,33 @@ function Form(props) {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <h2 className="label-wrapper">
-        <label htmlFor="new-todo-input" className="label__lg">
-          What needs to be done?
-        </label>
-      </h2>
-      <input
-        type="text"
-        id="new-todo-input"
-        className="input input__lg"
-        name="text"
-        autoComplete="off"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      Duracion
-      <input
-        type="text"
-        id="new-todo-input"
-        className="input input__lg"
-        name="text"
-        autoComplete="off"
-        value={seconds}
-        onChange={(e) => setSeconds(e.target.value)}
-      />
-      <button type="submit" className="btn btn__primary btn__lg">
+      <div className="form-group">
+        <label for="new-todo-input">What needs to be done?</label>
+        <input
+          type="text"
+          id="new-todo-input"
+          className="form-control"
+          name="text"
+          autoComplete="off"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
+      <div className="form-group">
+        <label for="new-todo-duration">Duración</label>
+        <input
+          type="text"
+          id="new-todo-duration"
+          className="form-control"
+          name="text"
+          autoComplete="off"
+          value={seconds}
+          onChange={(e) => setSeconds(e.target.value)}
+        />
+      </div>
+      <Button variant="primary" type="submit">
         Add
-      </button>
+      </Button>
     </form>
   );
 }

@@ -56,11 +56,9 @@ function Button({ startTimer, status, stopTimer, resetTimer, resumeTimer }) {
 
        {status === 3 ? (
         <div>
-          <button
-            className="stopwatch-btn stopwatch-btn-gre"
-          >
+
             Timer finalizado
-          </button>
+
         </div>
       ) : (
         ""

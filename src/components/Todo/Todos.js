@@ -3,7 +3,7 @@ import FilterButton from "./FilterButton";
 import Todo from "./Todo";
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
-import Stopwatch from "../Stopwatch/Stopwatch";
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 function Todos(props) {
 const [tasks, setTasks] = useState(props.tasks);
@@ -76,15 +76,16 @@ const filterList = FILTER_NAMES.map(name => (
   />
 ));
 
-const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
+const tasksNoun = taskList.length !== 1 ? 'Tareas' : 'Tarea';
 const headingText = `${taskList.length} ${tasksNoun}`;
 
   return (
     <div className="todoapp stack-large">
       <Form addTask={addTask} />
-      <Stopwatch key={5} h={0} m={0} s={5}/>
       <div className="filters btn-group stack-exception">
-        {filterList}
+        <ButtonGroup size="sm">
+          {filterList}
+        </ButtonGroup>
       </div>
       <h2 id="list-heading">{headingText}</h2>
       <ul

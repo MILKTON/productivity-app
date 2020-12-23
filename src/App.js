@@ -8,7 +8,7 @@ const DATA = [
   { id: "todo-0", name: "Eatss", seconds:"15", completed: true },
   { id: "todo-1", name: "Sleepss", seconds:"20", completed: false },
   { id: "todo-12", name: "reportWebVitals.js", seconds:"30", completed: false },
-  { id: "todo-22", name: "Repeasss", seconds:"60", completed: false },
+  { id: "todo-22", name: "Repeasss", seconds:"1", completed: false },
   { id: "todo-20", name: "XD", seconds:"61", completed: false }
 ];
 function App() {
