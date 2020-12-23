@@ -108,7 +108,7 @@ function Form(props) {
       </Tab.Container>
       </div>
       <div className="col text-center">
-        <Button variant="info" type="submit">
+        <Button variant="info" size="sm" type="submit">
           Crear tarea
         </Button>
       </div>
