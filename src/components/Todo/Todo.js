@@ -57,7 +57,7 @@ const viewTemplate = (
   <div>{'\u00A0'}</div>
   <div className="btn-group float-right">
     <Button type="button" className="btn btn-warning btn-sm" onClick={() => setEditing(true)}>
-      Editar ✎
+       {'\u00A0'}Editar {'\u00A0'} ✎ {'\u00A0'}
     </Button>
     <Button
       type="button"
